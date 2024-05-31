@@ -1,0 +1,79 @@
+main {
+	padding: 3rem;
+}
+#visual {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-start;
+	height: 290px;
+	min-height: 35vh;
+	margin-top: auto;
+	margin-bottom: 20px;
+}
+
+#visual div {
+	text-align: center;
+	width: 30px;
+	margin: 0 auto 0 0;
+	height: 100%;
+	color: inherit;
+	background-color: #fff;
+	opacity: 0;
+	border: none;
+	transition: opacity 0.3s, color 0.5s ease, height 0.8s, background-color 0.3s, border 0.5s ease;
+}
+
+#visual div.sorted {
+	background-color: #28a745;
+}
+
+#visual div.selected {
+	border: 1px solid yellow;
+}
+
+#visual div.min {
+	border: 5px solid yellow;
+}
+
+#visual div.loaded {
+	opacity: 1;
+}
+
+#visual div.loaded:hover {
+	opacity: 0.5;
+	transition: opacity 0s;
+}
+
+#visual .counter {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.complexity {
+	font-weight: normal;
+	font-style: oblique;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 700px) {
+	html, body {
+		font-size: small;
+	}
+
+	#visual {
+		width: 100%;
+		min-width: 300px;
+	}
+
+	#visual div {
+		margin: 0 auto;
+		width: 17px;
+	}
+
+	#visual div.min {
+		border: 2.5px solid yellow;
+	}
+}
